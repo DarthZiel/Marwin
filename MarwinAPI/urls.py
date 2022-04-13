@@ -16,21 +16,26 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include, re_path
 from staff.views import *
-urlpatterns = [
-    path('admin/', admin.site.urls),
+from rest_framework import routers
+user_router = routers.SimpleRouter()
+user_router.register(r'user', UserViewSet)
 
-    path('api/stafflist', StaffApiList.as_view()),
-    path('api/structurelist', StructureApiList.as_view()),
-    path('api/postionlist', PositionApiList.as_view()),
-    path('api/StaffUpdate/<int:pk>',StaffUpdate.as_view()),
-    path('api/StaffDestroy/<int:pk>', StaffDestroy.as_view()),
-    path('api/StructureUpdate/<int:pk>', StructureUpdate.as_view()),
-    path('api/StructureDestroy/<int:pk>', StructureDestroy.as_view()),
-    path('api/PostitonUpdate/<int:pk>',PositionUpdate.as_view()),
-    path('api/PositionDestroy/<int:pk>', PositionDestroy.as_view()),
-    path('api/UserList/',UserList.as_view()),
-    path('api/UserDetail/<int:pk>', UserDetail.as_view()),
-    path('api/UserDelete/<int:pk>', UserDelete.as_view()),
-    path('api/auth/', include('djoser.urls')),
-    re_path(r'auth/', include('djoser.urls.authtoken')),
+profile_router = routers.SimpleRouter()
+profile_router = (r'profile', ProfileViewSet)
+
+position_router = routers.SimpleRouter()
+position_router.register(r'position', PostitonViewSet)
+
+structure_router = routers.SimpleRouter()
+structure_router.register((r'structure', StructureViewSet))
+# Дамир, тут все просто.
+# http://127.0.0.1:8000/ + profile или user или position или structure/ , если нужна отельная запись, то тоже самое, но + /id
+urlpatterns = [
+    path('admin', admin.site.urls),
+    path('', include('staff.urls')),
+    path('api/v1/', include(user_router.urls)),
+    path('api/v1/', include(profile_router.urls)),
+    path('api/v1/', include(profile_router.urls)),
+    # path('api/auth/', include('djoser.urls')),
+    # re_path(r'auth/', include('djoser.urls.authtoken')),
 ]
