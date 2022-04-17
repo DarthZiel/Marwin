@@ -17,25 +17,26 @@ from django.contrib import admin
 from django.urls import path, include, re_path
 from staff.views import *
 from rest_framework import routers
+from django.conf import settings
+from django.conf.urls.static import static
 user_router = routers.SimpleRouter()
 user_router.register(r'user', UserViewSet)
 
 profile_router = routers.SimpleRouter()
-profile_router = (r'profile', ProfileViewSet)
+profile_router.register(r'profile', ProfileViewSet)
 
 position_router = routers.SimpleRouter()
 position_router.register(r'position', PostitonViewSet)
 
 structure_router = routers.SimpleRouter()
-structure_router.register((r'structure', StructureViewSet))
+structure_router.register(r'structure', StructureViewSet)
 # Дамир, тут все просто.
 # http://127.0.0.1:8000/ + profile или user или position или structure/ , если нужна отельная запись, то тоже самое, но + /id
 urlpatterns = [
-    path('admin', admin.site.urls),
+    path('admin/', admin.site.urls),
     path('', include('staff.urls')),
     path('api/v1/', include(user_router.urls)),
     path('api/v1/', include(profile_router.urls)),
-    path('api/v1/', include(profile_router.urls)),
-    # path('api/auth/', include('djoser.urls')),
-    # re_path(r'auth/', include('djoser.urls.authtoken')),
-]
+    path('api/v1/', include(profile_router.urls)),]
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

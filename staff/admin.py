@@ -5,4 +5,4 @@ from .models import *
 admin.site.register(Structure)
 admin.site.register(Position)
 admin.site.register(Profile)
-
+admin.site.register(Nation)

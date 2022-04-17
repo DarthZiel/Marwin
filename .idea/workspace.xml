@@ -5,16 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a09b6f65-7303-44ff-971a-69696edc5a09" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/staff/migrations/0002_auto_20220413_1142.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/MarwinAPI.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/MarwinAPI.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MarwinAPI/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/MarwinAPI/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MarwinAPI/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/MarwinAPI/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/staff/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/staff/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/staff/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/staff/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/staff/migrations/0002_auto_20220413_1142.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/staff/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/staff/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staff/serializer.py" beforeDir="false" afterPath="$PROJECT_DIR$/staff/serializer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/staff/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/staff/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/staff/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/staff/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -53,6 +52,11 @@
           <url>file://$PROJECT_DIR$/MarwinAPI/settings.py</url>
           <line>28</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/MarwinAPI/settings.py</url>
+          <line>127</line>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

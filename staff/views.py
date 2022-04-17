@@ -4,13 +4,13 @@ from rest_framework.permissions import IsAuthenticated
 
 from .serializer import *
 from .models import *
-# Create your views here.
 from rest_framework import viewsets
 
 
 class UserViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all()
-    serializer_class =UserSerializer
+    serializer_class = UserSerializer
+
 
 class ProfileViewSet(viewsets.ModelViewSet):
     queryset = Profile.objects.all()
