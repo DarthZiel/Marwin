@@ -18,7 +18,7 @@ class ProfileViewSet(viewsets.ModelViewSet):
 
 class PostitonViewSet(viewsets.ModelViewSet):
     queryset = Position.objects.all()
-    serializer_class = PostitonSerializer
+    serializer_class = PositionSerializer
 
 class StructureViewSet(viewsets.ModelViewSet):
     queryset = Structure.objects.all()

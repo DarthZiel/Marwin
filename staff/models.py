@@ -6,9 +6,9 @@ EDUCATION = [
 ]
 SEX = [('мужчина', 'мужчина'), ('женщина','женщина')]
 class Profile(models.Model):
-    user_id = models.ForeignKey(User, on_delete=models.CASCADE)
+
     fio = models.CharField(max_length=100)
-    postiton = models.ForeignKey("Position", on_delete=models.CASCADE,blank=True)
+    position = models.ForeignKey("Position", on_delete=models.CASCADE,blank=True)
     date_of_birth = models.DateField(verbose_name='дата рождения')
     structure = models.ForeignKey('Structure', on_delete=models.CASCADE,blank=True)
     nation = models.ForeignKey('nation', max_length=100, on_delete=models.DO_NOTHING)

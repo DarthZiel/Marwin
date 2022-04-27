@@ -7,6 +7,10 @@
     <list default="true" id="a09b6f65-7303-44ff-971a-69696edc5a09" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MarwinAPI/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/MarwinAPI/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/staff/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/staff/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/staff/serializer.py" beforeDir="false" afterPath="$PROJECT_DIR$/staff/serializer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/staff/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/staff/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

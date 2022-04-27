@@ -7,21 +7,23 @@ class UserSerializer(serializers.ModelSerializer):
         model = User
         fields = "__all__"
 
-class ProfileSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Profile
-        fields = "__all__"
+
 class StructureSerializer(serializers.ModelSerializer):
     class Meta:
         model = Structure
-        fields = "__all__"
+        fields = ['title']
 
-class PostitonSerializer(serializers.ModelSerializer):
+class PositionSerializer(serializers.ModelSerializer):
     class Meta:
         model = Position
+        fields = ['title']
+
+class ProfileSerializer(serializers.ModelSerializer):
+    position = serializers.SlugRelatedField(slug_field='title', queryset=Position.objects.all())
+    structure = serializers.SlugRelatedField(slug_field='title', queryset=Structure.objects.all())
+    class Meta:
+        model = Profile
         fields = "__all__"
-
-
 
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
